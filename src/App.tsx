@@ -1,10 +1,27 @@
-import React from 'react';
+import React, {FC} from 'react';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { QueryClient, QueryClientProvider } from 'react-query';
 
-function App() {
-  return (
-    <div>
-    </div>
-  );
-}
+import { RootPage } from './pages/root';
+import { ROUTES } from './utils/constants/router';
 
-export default App;
+const router = createBrowserRouter([
+  {
+    path: ROUTES.ROOT,
+    element: <RootPage />
+  }
+]);
+
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      refetchOnWindowFocus: false
+    }
+  }
+});
+
+export const App: FC = () => (
+  <QueryClientProvider client={queryClient}>
+    <RouterProvider router={router} />
+  </QueryClientProvider>
+);
