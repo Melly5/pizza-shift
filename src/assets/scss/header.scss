@@ -1,0 +1,39 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Roboto:wght@300;400;500&display=swap');
+
+$logo-font: 'Playfair Display', serif;
+$roboto: 'Roboto', sans-serif;
+
+.main {
+  width: 100vw;
+  background-image: url('../../assets/images/header/bg-header.png');
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  padding: 40px 80px;
+  .name {
+    width: fit-content;
+    margin-left: 30px;
+    font-size: 30px;
+    font-family: $logo-font;
+    color: white;
+  }
+  .image {
+    width: 100px;
+    margin: 0 30px;
+  }
+  .variants {
+    display: flex;
+    width: 100vw;
+    padding: 0 300px;
+    p {
+      padding: 0 30px;
+      color: white;
+      font-size: 20px;
+      font-family: $roboto;
+    }
+  }
+}
