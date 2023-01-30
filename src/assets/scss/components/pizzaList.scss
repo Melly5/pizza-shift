@@ -1,0 +1,32 @@
+@import '../fonts';
+@import './pizzaItem';
+
+.main_pizza {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 70px 140px;
+  p {
+    margin-bottom: 50px;
+    font-size: 48px;
+    font-weight: 500;
+    font-family: $roboto;
+  }
+  .categories {
+    display: flex;
+    justify-content: center;
+    ul {
+      display: flex;
+      list-style-type: none;
+      li {
+        margin-right: 30px;
+      }
+    }
+  }
+  .pizzas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 50px;
+  }
+}

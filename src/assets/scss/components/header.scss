@@ -1,15 +1,13 @@
+@import '../fonts';
+
 * {
   padding: 0;
   margin: 0;
 }
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Roboto:wght@300;400;500&display=swap');
-
-$logo-font: 'Playfair Display', serif;
-$roboto: 'Roboto', sans-serif;
 
 .main {
   width: 100vw;
-  background-image: url('../../assets/images/header/bg-header.png');
+  background-image: url('../../../assets/images/header/bg-header.png');
   background-size: cover;
   display: flex;
   align-items: center;
