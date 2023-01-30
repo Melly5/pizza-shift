@@ -1,0 +1,25 @@
+.button {
+  background-color: $color-grey;
+  min-width: 80px;
+  padding: 13px 30px;
+  display: flex;
+  justify-content: center;
+  border-radius: 30px;
+  font-weight: 500;
+  font-family: $roboto;
+  cursor: pointer;
+  transition: background-color 0.1s ease-in-out;
+
+  &:hover {
+    background-color: darken($color-grey, 5%);
+  }
+
+  &.active {
+    background-color: darken($color-main, 2%);
+    color: #fff;
+
+    &:hover {
+      background-color: $color-hover;
+    }
+  }
+}

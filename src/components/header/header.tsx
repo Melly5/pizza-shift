@@ -1,4 +1,4 @@
-import '../../assets/scss/header.scss';
+import '../../assets/scss/components/header.scss';
 import { Link, useNavigate } from 'react-router-dom';
 
 export const Header = () => {

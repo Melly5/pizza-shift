@@ -1,0 +1,47 @@
+@import '../fonts';
+@import '../variables';
+@import './button';
+
+.pizza-block {
+  width: 280px;
+  text-align: center;
+  margin-bottom: 65px;
+  padding: 35px 30px;
+  border: 3px solid $color-grey;
+  border-radius: 14px;
+  font-family: $roboto;
+
+  &__image {
+    width: 240px;
+  }
+
+  &__name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .title {
+      font-size: 22px;
+      font-weight: 900;
+      letter-spacing: 1%;
+    }
+  }
+
+  &__description {
+    padding-top: 10px;
+    text-indent: 0; /* Отступ первой строки */
+    text-align: left;
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+  &__price {
+    font-weight: 500;
+    font-size: 22px;
+    letter-spacing: 0.015em;
+  }
+}
