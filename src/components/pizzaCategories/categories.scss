@@ -1,0 +1,11 @@
+.categories {
+  display: flex;
+  justify-content: center;
+  ul {
+    display: flex;
+    list-style-type: none;
+    li {
+      margin-right: 30px;
+    }
+  }
+}

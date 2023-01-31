@@ -22,4 +22,18 @@
       background-color: $color-hover;
     }
   }
+
+  &.large {
+    height: 50px;
+    width: 300px;
+    align-items: center;
+    background-color: #191f2c;
+    color: #fff;
+    font-size: 28px;
+    font-weight: lighter;
+    border-radius: 40px;
+    &:hover {
+      background-color: $color-hover;
+    }
+  }
 }

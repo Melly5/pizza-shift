@@ -5,21 +5,23 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 70px 140px 0px 140px;
+  padding: 70px 140px 70px 140px;
   font-family: $inter;
   .article {
     margin-bottom: 50px;
     font-size: 48px;
     font-weight: bold;
   }
-  .order {
+  .title {
+    font-size: 32px;
+    margin: 55px 0;
+  }
+  .content {
     width: 100%;
     flex-direction: column;
-    .order-total {
-      font-size: 32px;
-    }
+  }
+  .order {
     .order-items {
-      padding: 70px 0;
       .order-item {
         display: flex;
         justify-content: space-between;
@@ -38,7 +40,7 @@
         .price {
           font-size: 30px;
           font-weight: lighter;
-          margin-right: 220px;
+          margin-left: 600px;
         }
         .item-amount {
           display: flex;
@@ -55,23 +57,74 @@
       }
     }
   }
-
-  .categories {
+  .inputs {
     display: flex;
-    justify-content: center;
-    ul {
+    align-items: center;
+    font-family: $inter;
+    font-size: 18px;
+    margin-bottom: 20px;
+    width: 100%;
+    input[type='text'] {
+      font-size: 18px;
+    }
+    .input {
+      height: $input-height;
+      border: 1px solid $input-placeholder;
+      border-radius: 5px;
+      margin: 0 24px 0 0;
+      padding: 0 19px;
+    }
+    input::placeholder {
+      font-size: 18px;
+      color: $input-placeholder;
+    }
+    .smallest {
+      width: $input-smallest;
+    }
+    .small {
+      width: $input-small;
+    }
+    .medium {
+      width: $input-medium;
+    }
+    .large {
+      width: $input-large;
+    }
+    .textarea {
+      width: $input-large + $input-medium + 64px;
+      height: 100px;
+      padding-top: 10px;
+      font-size: 18px;
+    }
+    textarea::placeholder {
+      font-size: 18px;
+      color: $input-placeholder;
+    }
+    .check-item {
       display: flex;
-      list-style-type: none;
-      li {
-        margin-right: 30px;
+      align-items: center;
+      width: 180px;
+      margin: 0;
+      .checkbox {
+        width: 16px;
+        height: 16px;
+        margin-right: 10px;
+        accent-color: #34495e;
       }
     }
   }
+  .button.large {
+    margin: 50px 0 70px 0;
+  }
 
-  .pizzas {
+  .post-order {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 50px;
+    flex-direction: column;
+    align-items: center;
+    font-size: 32px;
+    p {
+      font-family: $inter;
+      margin: 55px 0;
+    }
   }
 }

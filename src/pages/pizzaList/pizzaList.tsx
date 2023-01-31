@@ -1,4 +1,6 @@
 import { useQuery } from 'react-query';
+import { Categories } from '../../components/pizzaCategories/categories';
+import { Skeleton } from '../../components/pizzaItem/skeleton';
 import { Header } from '../../components/header/header';
 import { PizzaService } from '../../utils/api/requests';
 import { PizzaItem } from '../../components/pizzaItem/pizzaItem';
@@ -6,28 +8,20 @@ import { Footer } from '../../components/footer/footer';
 import './pizzaList.scss';
 
 export const PizzaList = () => {
-  const { data, isLoading } = useQuery('pizzas', () => PizzaService.getAll());
+  const { data, isLoading, error } = useQuery('pizzas', () => PizzaService.getAll());
 
-  if (isLoading) return <div>loading...</div>;
+  console.log(data);
 
   return (
     <div>
       <Header />
       <div className='main-pizza'>
         <p>Выбрать пиццу</p>
-        <div className='categories'>
-          <ul>
-            <li className='button active'>Рекомендуем</li>
-            <li className='button'>Без мяса</li>
-            <li className='button'>Сладкая</li>
-            <li className='button'>Акции</li>
-            <li className='button'>Напитки</li>
-          </ul>
-        </div>
+        <Categories />
         <div className='pizzas'>
-          {data?.data.map((pizza: any, idx: Number) => (
-            <PizzaItem key={idx} pizza={pizza} />
-          ))}
+          {data?.data.map((pizza: any, idx: Number) =>
+            isLoading ? <Skeleton /> : <PizzaItem key={idx} pizza={pizza} />
+          )}
         </div>
       </div>
       <Footer />
