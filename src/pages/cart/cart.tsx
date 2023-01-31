@@ -27,40 +27,50 @@ export const Cart = () => {
                 </div>
                 <p className='price'>649 ₽</p>
               </div>
-              <div>
-                <div className='item-amount'>
-                  <img
-                    className='operators'
-                    src='/files/minus.svg'
-                    width={10}
-                    height={13}
-                    style={{ margin: '0 19px 0 2px' }}
-                    alt='minus'
-                  />
-                  <div>1</div>
-                  <img
-                    className='operators'
-                    src='/files/plus.svg'
-                    width={17}
-                    height={17}
-                    style={{ marginLeft: '18px' }}
-                    alt='plus'
-                  />
+              {isOrdered ? (
+                <></>
+              ) : (
+                <div>
+                  <div className='item-amount'>
+                    <img
+                      className='operators'
+                      src='/files/minus.svg'
+                      width={10}
+                      height={13}
+                      style={{ margin: '0 19px 0 2px' }}
+                      alt='minus'
+                    />
+                    <div>1</div>
+                    <img
+                      className='operators'
+                      src='/files/plus.svg'
+                      width={17}
+                      height={17}
+                      style={{ marginLeft: '18px' }}
+                      alt='plus'
+                    />
+                  </div>
+                  <div className=''>
+                    <img
+                      src='/files/delete.svg'
+                      width={20}
+                      height={20}
+                      style={{ marginRight: '10px' }}
+                      alt='delete'
+                    />
+                  </div>
                 </div>
-                <div className=''>
-                  <img
-                    src='/files/delete.svg'
-                    width={20}
-                    height={20}
-                    style={{ marginRight: '10px' }}
-                    alt='delete'
-                  />
-                </div>
-              </div>
+              )}
             </div>
           </div>
         </div>
         {isOrdered ? (
+          <div className='post-order'>
+            <p>Ваш заказ принят!</p>
+            <img src='files/pizza.png' />
+            <p>Доставим по указанному адресу в течение 30 минут</p>
+          </div>
+        ) : (
           <div style={{ width: '100%' }}>
             <div className='contacts content'>
               <p className='title'>Контактные данные</p>
@@ -107,12 +117,6 @@ export const Cart = () => {
             <div className='content'>
               <div className='button large'>Отправить заказ</div>
             </div>
-          </div>
-        ) : (
-          <div className='post-order'>
-            <p>Ваш заказ принят!</p>
-            <img src='files/pizza.png' />
-            <p>Доставим по указанному адресу в течение 30 минут</p>
           </div>
         )}
       </div>
