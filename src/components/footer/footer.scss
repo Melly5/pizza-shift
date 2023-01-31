@@ -1,0 +1,20 @@
+@import '../../assets/scss/fonts.scss';
+
+.main-footer {
+  width: 100vw;
+  background-color: #191f2c;
+  color: white;
+  padding: 40px 190px;
+
+  .name {
+    font-family: $logo-font;
+    font-size: 24px;
+  }
+
+  .copyright {
+    font-family: $roboto;
+    font-size: 20px;
+    padding-top: 20px;
+    letter-spacing: 1px;
+  }
+}

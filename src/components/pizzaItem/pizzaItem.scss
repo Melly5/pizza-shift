@@ -1,6 +1,6 @@
-@import '../fonts';
-@import '../variables';
-@import './button';
+@import '../../assets/scss/fonts.scss';
+@import '../../assets/scss/variables';
+@import '../../assets/scss/components/button';
 
 .pizza-block {
   width: 280px;
@@ -14,7 +14,6 @@
   &__image {
     width: 240px;
   }
-
   &__name {
     display: flex;
     justify-content: space-between;
@@ -26,8 +25,9 @@
     }
   }
 
-  &__description {
+  &__ingredients {
     padding-top: 10px;
+    height: 100px;
     text-indent: 0; /* Отступ первой строки */
     text-align: left;
   }
@@ -36,7 +36,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 20px;
+    margin-top: auto;
+    margin-bottom: 2px;
   }
 
   &__price {
