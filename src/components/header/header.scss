@@ -1,13 +1,13 @@
-@import '../fonts';
+@import '../../assets/scss/fonts';
 
 * {
   padding: 0;
   margin: 0;
 }
 
-.main {
+.main-header {
   width: 100vw;
-  background-image: url('../../../assets/images/header/bg-header.png');
+  background-image: url('../../assets/images/header/bg-header.png');
   background-size: cover;
   display: flex;
   align-items: center;

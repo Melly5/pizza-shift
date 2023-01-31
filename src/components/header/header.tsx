@@ -1,11 +1,17 @@
-import '../../assets/scss/components/header.scss';
+import './header.scss';
 import { Link, useNavigate } from 'react-router-dom';
 
 export const Header = () => {
   return (
-    <div className='main'>
+    <div className='main-header'>
       <p className='name'>SANTORINIZ</p>
-      <div className='image'>pepper</div>
+      <img
+        className='image'
+        src='../../assets/images/header/pepper.png'
+        alt='pepper'
+        width={100}
+        height={50}
+      />
       <div className='variants'>
         <Link to='/' style={{ textDecoration: 'none' }}>
           <p>Главная</p>

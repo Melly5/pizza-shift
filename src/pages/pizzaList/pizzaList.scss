@@ -1,11 +1,11 @@
-@import '../fonts';
-@import './pizzaItem';
+@import '../../assets/scss/fonts.scss';
+@import '../../components/pizzaItem/pizzaItem.scss';
 
 .main_pizza {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 70px 140px;
+  padding: 70px 140px 0px 140px;
   p {
     margin-bottom: 50px;
     font-size: 48px;

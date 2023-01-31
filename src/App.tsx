@@ -2,18 +2,22 @@ import React, { FC } from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from 'react-query';
 
-import { RootPage } from './pages/root';
+import { MainPage } from './pages/main/root';
 import { ROUTES } from './utils/constants/router';
-import { PizzaList } from './pages/pizzaList';
+import { PizzaList } from './pages/pizzaList/pizzaList';
 
 const router = createBrowserRouter([
   {
     path: ROUTES.ROOT,
-    element: <RootPage />
+    element: <MainPage />
   },
   {
     path: ROUTES.PIZZA_LIST,
     element: <PizzaList />
+  },
+  {
+    path: ROUTES.CART,
+    element: <
   }
 ]);
 
