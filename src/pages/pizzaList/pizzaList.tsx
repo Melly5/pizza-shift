@@ -1,19 +1,19 @@
-import { Header } from '../../components/header/header';
-import './pizzaList.scss';
 import { useQuery } from 'react-query';
+import { Header } from '../../components/header/header';
 import { PizzaService } from '../../utils/api/requests';
-import { Footer } from '../../components/footer/footer';
 import { PizzaItem } from '../../components/pizzaItem/pizzaItem';
+import { Footer } from '../../components/footer/footer';
+import './pizzaList.scss';
 
 export const PizzaList = () => {
-  const { data, isLoading, error } = useQuery('pizzas', () => PizzaService.getAll());
+  const { data, isLoading } = useQuery('pizzas', () => PizzaService.getAll());
 
   if (isLoading) return <div>loading...</div>;
 
   return (
     <div>
       <Header />
-      <div className='main_pizza'>
+      <div className='main-pizza'>
         <p>Выбрать пиццу</p>
         <div className='categories'>
           <ul>

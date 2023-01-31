@@ -1,4 +1,3 @@
-import React from 'react';
 import { Header } from '../../components/header/header';
 import { Footer } from '../../components/footer/footer';
 import './cart.scss';
@@ -30,7 +29,7 @@ export const Cart = () => {
                 <div className='item-amount'>
                   <img
                     className='operators'
-                    src='minus.svg'
+                    src='/files/minus.svg'
                     width={10}
                     height={13}
                     style={{ margin: '0 19px 0 2px' }}
@@ -39,7 +38,7 @@ export const Cart = () => {
                   <div>1</div>
                   <img
                     className='operators'
-                    src='plus.svg'
+                    src='/files/plus.svg'
                     width={17}
                     height={17}
                     style={{ marginLeft: '18px' }}
@@ -48,7 +47,7 @@ export const Cart = () => {
                 </div>
                 <div className=''>
                   <img
-                    src='delete.svg'
+                    src='/files/delete.svg'
                     width={20}
                     height={20}
                     style={{ marginRight: '10px' }}

@@ -1,9 +1,8 @@
 import React, { FC } from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from 'react-query';
-
-import { MainPage } from './pages/main/root';
 import { ROUTES } from './utils/constants/router';
+import { MainPage } from './pages/main/root';
 import { PizzaList } from './pages/pizzaList/pizzaList';
 import { Cart } from './pages/cart/cart';
 

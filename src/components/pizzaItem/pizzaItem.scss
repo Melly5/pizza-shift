@@ -9,12 +9,12 @@
   padding: 35px 30px;
   border: 3px solid $color-grey;
   border-radius: 14px;
-  font-family: $roboto;
+  font-family: $inter;
 
-  &__image {
+  .image {
     width: 240px;
   }
-  &__name {
+  .name {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -25,14 +25,14 @@
     }
   }
 
-  &__ingredients {
+  .ingredients {
     padding-top: 10px;
     height: 100px;
     text-indent: 0; /* Отступ первой строки */
     text-align: left;
   }
 
-  &__bottom {
+  .bottom {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -40,7 +40,7 @@
     margin-bottom: 2px;
   }
 
-  &__price {
+  .price {
     font-weight: 500;
     font-size: 22px;
     letter-spacing: 0.015em;
