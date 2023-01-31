@@ -12,17 +12,6 @@
     font-weight: bold;
     font-family: $inter;
   }
-  .categories {
-    display: flex;
-    justify-content: center;
-    ul {
-      display: flex;
-      list-style-type: none;
-      li {
-        margin-right: 30px;
-      }
-    }
-  }
   .pizzas {
     display: flex;
     flex-wrap: wrap;
