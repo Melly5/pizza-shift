@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from 'react-query';
 import { MainPage } from './pages/main/root';
 import { ROUTES } from './utils/constants/router';
 import { PizzaList } from './pages/pizzaList/pizzaList';
+import { Cart } from './pages/cart/cart';
 
 const router = createBrowserRouter([
   {
@@ -17,7 +18,7 @@ const router = createBrowserRouter([
   },
   {
     path: ROUTES.CART,
-    element: <
+    element: <Cart />
   }
 ]);
 
