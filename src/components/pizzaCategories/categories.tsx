@@ -1,23 +1,17 @@
 import { useState } from 'react';
 import './categories.scss';
-
-export const Categories = () => {
-  const [activeIndex, setActiveIndex] = useState<Number>(0);
-
+interface Category {}
+export const Categories = ({ value, onClickCategory }: any) => {
   const categories = ['Рекомендуем', 'Без мяса', 'Сладкая', 'Акции', 'Напитки'];
-
-  const onClickCategory = (i: Number) => {
-    setActiveIndex(i);
-  };
 
   return (
     <div className='categories'>
       <ul>
         {categories.map((category, i) => (
           <li
-            key={category}
+            key={i}
             onClick={() => onClickCategory(i)}
-            className={activeIndex === i ? 'button active' : 'button'}
+            className={value === i ? 'button active' : 'button'}
           >
             {category}
           </li>

@@ -14,7 +14,8 @@ export const MainPage = () => {
 
   return (
     <div className='main-page'>
-      <Header/>
+      <Header />
+
       <div className='content'>
         <ul className='advantages-circle'>
           {speciesArray.map((image) => (
@@ -23,6 +24,7 @@ export const MainPage = () => {
             </li>
           ))}
         </ul>
+        <div className='button active main'>ЗАКАЗАТЬ</div>
       </div>
     </div>
   );
