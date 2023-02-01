@@ -9,20 +9,35 @@ import { Footer } from '../../components/footer/footer';
 import './pizzaList.scss';
 
 export const PizzaList = () => {
-  const { data, isLoading, error } = useQuery('pizzas', () => PizzaService.getAll());
+  const { data, isLoading} = useQuery('pizzas', () => PizzaService.getAll());
 
-  const [categoryId, setCategoryId] = useState<Number>(0);
-  console.log(data);
+  const [categoryId, setCategoryId] = useState<any>(1);
+  const categoryNames = ['new', 'spicy', 'vegeterian'];
+  console.log(categoryNames[categoryId]);
 
   return (
     <div>
       <Header />
       <div className='main-pizza'>
         <p>Выбрать пиццу</p>
-        <Categories value={categoryId} onClickCategory={(id: Number) => setCategoryId(id)} />
+
+        <Categories
+          value={categoryId}
+          onClickCategory={(id: Number) => {
+            setCategoryId(id);
+          }}
+        />
         <div className='pizzas'>
           {data?.data.map((pizza: any, idx: Number) =>
-            isLoading ? <Skeleton /> : <PizzaItem key={idx} pizza={pizza} />
+            isLoading ? (
+              <Skeleton />
+            ) : categoryId === 0 || categoryId === 4 ? (
+              <PizzaItem key={idx} pizza={pizza} />
+            ) : (
+              Object.values(pizza.classifications)[categoryId - 1] === true && (
+                <PizzaItem key={idx} pizza={pizza} />
+              )
+            )
           )}
         </div>
       </div>
