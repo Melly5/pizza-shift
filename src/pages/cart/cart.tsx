@@ -3,7 +3,7 @@ import { Footer } from '../../components/footer/footer';
 import './cart.scss';
 
 export const Cart = () => {
-  const isOrdered = true;
+  const isOrdered = false;
 
   return (
     <div>

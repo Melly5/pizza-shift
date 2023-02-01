@@ -1,0 +1,50 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+@mixin distribute-on-circle($nb-items, $circle-size, $item-size) {
+  $half-item: ($item-size / 2);
+  $half-parent: ($circle-size / 2);
+
+  > * {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: $item-size;
+    height: $item-size;
+    margin: -$half-item;
+  }
+
+  $angle: (360 / 16);
+  $rot: -169;
+  @for $i from 1 through $nb-items {
+    > :nth-of-type(#{$i}) {
+      transform: rotate($rot * 1deg) translate($half-parent);
+    }
+    $rot: ($rot + $angle);
+  }
+}
+.main-page {
+  width: 100%;
+  height: 100vh;
+  background-image: url('../../../public/files/bg-main.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  .advantages {
+    &-circle {
+      @include distribute-on-circle(8, 1280px, 8em);
+      width: 100%;
+      position: fixed;
+      bottom: -5px;
+
+      &__element {
+        img {
+          display: block;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
