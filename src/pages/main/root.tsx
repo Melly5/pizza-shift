@@ -1,5 +1,7 @@
+import { Link } from 'react-router-dom';
 import { Header } from '../../components/header/header';
 import './main.scss';
+
 export const MainPage = () => {
   const speciesArray = [
     '/files/main/ingredients/olives.png',
@@ -24,7 +26,9 @@ export const MainPage = () => {
             </li>
           ))}
         </ul>
-        <div className='button active main'>ЗАКАЗАТЬ</div>
+        <Link className='link' to='/pizzas'>
+          <div className='button active main'>ЗАКАЗАТЬ</div>
+        </Link>
       </div>
     </div>
   );

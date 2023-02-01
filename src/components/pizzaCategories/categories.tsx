@@ -1,8 +1,7 @@
-import { useState } from 'react';
 import './categories.scss';
-interface Category {}
+
 export const Categories = ({ value, onClickCategory }: any) => {
-  const categories = ['Рекомендуем', 'Без мяса', 'Сладкая', 'Акции', 'Напитки'];
+  const categories = ['Рекомендуем', 'Новинки', 'Без мяса', 'Острая', 'Акции'];
 
   return (
     <div className='categories'>
