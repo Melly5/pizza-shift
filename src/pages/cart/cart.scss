@@ -46,6 +46,9 @@
     &.large {
       width: $input-large;
     }
+    &.invalid {
+      border-color: red;
+    }
   }
   input::placeholder {
     font-size: 18px;
@@ -86,5 +89,12 @@
       font-family: $inter;
       margin: 55px 0;
     }
+  }
+  .error {
+    color: red;
+    font-size: 16px;
+  }
+  .error:last-child {
+    margin-bottom: 10px;
   }
 }
