@@ -1,5 +1,5 @@
 @import '../../assets/scss/fonts.scss';
-@import '../../components/pizzaItem/pizzaItem.scss';
+@import '../../assets/scss/variables.scss';
 
 .main-cart {
   display: flex;
@@ -7,6 +7,10 @@
   align-items: center;
   padding: 70px 140px 70px 140px;
   font-family: $inter;
+  section {
+    width: 100%;
+    flex-direction: column;
+  }
   .article {
     margin-bottom: 50px;
     font-size: 48px;
@@ -16,102 +20,58 @@
     font-size: 32px;
     margin: 55px 0;
   }
-  .content {
-    width: 100%;
-    flex-direction: column;
-  }
-  .order {
-    .order-items {
-      .order-item {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        div {
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-        }
-        .item-info {
-          display: flex;
-          flex-direction: column;
-          align-items: baseline;
-          padding-left: 40px;
-        }
-        .price {
-          font-size: 30px;
-          font-weight: lighter;
-          margin-left: 600px;
-        }
-        .item-amount {
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          background-color: $color-grey;
-          padding: 10px 15px;
-          margin-right: 20px;
-          border-radius: 30px;
-          .operators {
-            cursor: pointer;
-          }
-        }
-      }
-    }
-  }
   .inputs {
     display: flex;
     align-items: center;
+    width: 100%;
+  }
+
+  .input {
+    height: $input-height;
+    border: 1px solid $input-placeholder;
+    border-radius: 5px;
+    margin: 0 24px 20px 0;
+    padding: 0 19px;
     font-family: $inter;
     font-size: 18px;
-    margin-bottom: 20px;
-    width: 100%;
-    input[type='text'] {
-      font-size: 18px;
-    }
-    .input {
-      height: $input-height;
-      border: 1px solid $input-placeholder;
-      border-radius: 5px;
-      margin: 0 24px 0 0;
-      padding: 0 19px;
-    }
-    input::placeholder {
-      font-size: 18px;
-      color: $input-placeholder;
-    }
-    .smallest {
+    &.smallest {
       width: $input-smallest;
     }
-    .small {
+    &.small {
       width: $input-small;
     }
-    .medium {
+    &.medium {
       width: $input-medium;
     }
-    .large {
+    &.large {
       width: $input-large;
     }
-    .textarea {
-      width: $input-large + $input-medium + 64px;
-      height: 100px;
-      padding-top: 10px;
-      font-size: 18px;
+  }
+  input::placeholder {
+    font-size: 18px;
+    color: $input-placeholder;
+  }
+
+  .check-item {
+    margin-bottom: 20px;
+    .checkbox {
+      width: 16px;
+      height: 16px;
+      margin-right: 10px;
+      accent-color: #34495e;
     }
-    textarea::placeholder {
-      font-size: 18px;
-      color: $input-placeholder;
-    }
-    .check-item {
-      display: flex;
-      align-items: center;
-      width: 180px;
-      margin: 0;
-      .checkbox {
-        width: 16px;
-        height: 16px;
-        margin-right: 10px;
-        accent-color: #34495e;
-      }
-    }
+  }
+
+  .textarea {
+    display: block;
+    width: $input-large + $input-medium + 64px;
+    height: 100px;
+    padding-top: 10px;
+    font-size: 18px;
+  }
+  textarea::placeholder {
+    font-size: 18px;
+    color: $input-placeholder;
   }
   .button.large {
     margin: 50px 0 70px 0;

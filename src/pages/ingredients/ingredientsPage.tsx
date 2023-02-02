@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Header } from '../../components/header/header';
-import './main.scss';
+import './ingredients.scss';
 
 export const MainPage = () => {
   const speciesArray = [
@@ -21,7 +21,7 @@ export const MainPage = () => {
       <div className='content'>
         <ul className='advantages-circle'>
           {speciesArray.map((image) => (
-            <li className='advantages-circle__element'>
+            <li className='advantages-circle__element' key={image}>
               <img src={image} alt='' />
             </li>
           ))}

@@ -2,9 +2,10 @@ import React, { FC } from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { ROUTES } from './utils/constants/router';
-import { MainPage } from './pages/main/root';
-import { PizzaList } from './pages/pizzaList/pizzaList';
-import { Cart } from './pages/cart/cart';
+import { MainPage } from './pages/ingredients/ingredientsPage';
+import { PizzaList } from './pages/pizza/pizzaPage';
+import { Cart } from './pages/cart/cartPage';
+import { Header } from './components/header/header';
 
 const router = createBrowserRouter([
   {

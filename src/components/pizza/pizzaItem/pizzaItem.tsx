@@ -9,7 +9,7 @@ export const PizzaItem = ({ pizza }: any) => {
         <div>{pizza.price.size.medium} см</div>
       </div>
       <div className='ingredients'>
-        {pizza.ingredients.map((ingredient: String) => (
+        {pizza.ingredients.map((ingredient: String, id: number) => (
           <>{ingredient}, </>
         ))}
       </div>

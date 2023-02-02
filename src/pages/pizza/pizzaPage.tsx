@@ -1,15 +1,15 @@
 import { useQuery } from 'react-query';
 import { useState } from 'react';
-import { Categories } from '../../components/pizzaCategories/categories';
-import { Skeleton } from '../../components/pizzaItem/skeleton';
+import { Categories } from '../../components/pizza/pizzaCategories/categories';
+import { Skeleton } from '../../components/pizza/pizzaItem/pizzaItemSkeleton';
 import { Header } from '../../components/header/header';
 import { PizzaService } from '../../utils/api/requests';
-import { PizzaItem } from '../../components/pizzaItem/pizzaItem';
+import { PizzaItem } from '../../components/pizza/pizzaItem/pizzaItem';
 import { Footer } from '../../components/footer/footer';
-import './pizzaList.scss';
+import './pizza.scss';
 
 export const PizzaList = () => {
-  const { data, isLoading} = useQuery('pizzas', () => PizzaService.getAll());
+  const { data, isLoading } = useQuery('pizzas', () => PizzaService.getAll());
 
   const [categoryId, setCategoryId] = useState<any>(1);
   const categoryNames = ['new', 'spicy', 'vegeterian'];
