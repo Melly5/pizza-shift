@@ -1,3 +1,4 @@
+import React from 'react';
 import './pizzaItem.scss';
 
 export const PizzaItem = ({ pizza }: any) => {
@@ -9,13 +10,13 @@ export const PizzaItem = ({ pizza }: any) => {
         <div>{pizza.price.size.medium} см</div>
       </div>
       <div className='ingredients'>
-        {pizza.ingredients.map((ingredient: String, id: number) => (
+        {pizza.ingredients.map((ingredient: string, id: number) => (
           <>{ingredient}, </>
         ))}
       </div>
       <div className='bottom'>
         <div className='price'>{pizza.price.default} ₽</div>
-        <div className='button active'>Добавить</div>
+        <button className='button active'>Добавить</button>
       </div>
     </div>
   );

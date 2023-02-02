@@ -1,3 +1,4 @@
+import React from 'react';
 import { useQuery } from 'react-query';
 import { useState } from 'react';
 import { Categories } from '../../components/pizza/pizzaCategories/categories';
@@ -23,14 +24,14 @@ export const PizzaList = () => {
 
         <Categories
           value={categoryId}
-          onClickCategory={(id: Number) => {
+          onClickCategory={(id: number) => {
             setCategoryId(id);
           }}
         />
         <div className='pizzas'>
-          {data?.data.map((pizza: any, idx: Number) =>
+          {data?.data.map((pizza: any, idx: number) =>
             isLoading ? (
-              <Skeleton />
+              <Skeleton key={idx}/>
             ) : categoryId === 0 || categoryId === 4 ? (
               <PizzaItem key={idx} pizza={pizza} />
             ) : (

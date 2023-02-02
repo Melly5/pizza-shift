@@ -1,3 +1,4 @@
+import React from 'react';
 import './orderItem.scss';
 
 export const OrderItem = () => {

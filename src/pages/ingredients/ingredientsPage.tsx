@@ -1,3 +1,4 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { Header } from '../../components/header/header';
 import './ingredients.scss';
@@ -27,7 +28,7 @@ export const MainPage = () => {
           ))}
         </ul>
         <Link className='link' to='/pizzas'>
-          <div className='button active main'>ЗАКАЗАТЬ</div>
+          <button className='button active main'>ЗАКАЗАТЬ</button>
         </Link>
       </div>
     </div>

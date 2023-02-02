@@ -1,11 +1,11 @@
-import { OrderItem } from "../orderItem/orderItem";
+import React from 'react';
+import { OrderItem } from '../orderItem/orderItem';
 import './orderList.scss';
 
 export const OrderList = () => {
-
   return (
     <div className='order-items'>
-        <OrderItem/>
+      <OrderItem />
     </div>
   );
 };

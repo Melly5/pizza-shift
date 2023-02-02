@@ -1,3 +1,4 @@
+import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 
@@ -16,7 +17,7 @@ const SignupSchema = Yup.object().shape({
   number: Yup.number()
     .min(11, 'Номер имеет минимум 11 цифр ')
     .required('Заполните поле Номер телефона')
-        .typeError('Поле Номер телефона должно содержать только цифры'),
+    .typeError('Поле Номер телефона должно содержать только цифры'),
   birthDate: Yup.string()
     .min(10, 'Проверьте формат MM.DD.YYYY')
     .required('Заполните поле Дата рождения')

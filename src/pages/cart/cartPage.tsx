@@ -1,3 +1,4 @@
+import React from 'react';
 import { Header } from '../../components/header/header';
 import { OrderList } from '../../components/cart/orderList/orderList';
 import { Footer } from '../../components/footer/footer';
