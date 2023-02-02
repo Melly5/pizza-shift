@@ -1,10 +1,12 @@
 # :sparkles: Разработка сайта для заказа пиццы :pizza:
-Для ревью смотреть код только главной ветвки main. Пока что отсутствуют интерфейсы типов(типизация)
+Для ревью смотреть код только главной ветвки main. Пока что отсутствуют интерфейсы типов(типизация) не смогла сделать alias
 
 ## Основные задачи:
 
 - [x] Верстка основных страниц и компонентов
 - [x] Получение списка пицц с сервера *(функционал)*
+- [x] Подключение eslint
+- [ ] Layout
 - [ ] Добавление пиццы в корзину *(функционал)*
 - [ ] Отправка заказа на сервер *(функционал)*
 - [ ] Рефакторинг верстки
@@ -13,8 +15,10 @@
 ## Запуск клиента:
 
   <img src="https://github.com/devicons/devicon/blob/master/icons/react/react-original-wordmark.svg" title="React" alt="React" width="40" height="40"/>&nbsp;
-    <img src="https://github.com/devicons/devicon/blob/master/icons/typescript/typescript-plain.svg" title="Typescript" alt="Typescript" width="40" height="40"/>&nbsp;
-      <img src="https://github.com/devicons/devicon/blob/master/icons/sass/sass-original.svg" title="Sass" alt="Sass" width="40" height="40"/>&nbsp;
+  <img src="https://github.com/devicons/devicon/blob/master/icons/typescript/typescript-plain.svg" title="Typescript" alt="Typescript" width="40" height="40"/>&nbsp;
+  <img src="https://github.com/devicons/devicon/blob/master/icons/sass/sass-original.svg" title="Sass" alt="Sass" width="40" height="40"/>&nbsp;
+  <img src="https://github.com/devicons/devicon/blob/master/icons/eslint/eslint-original.svg" title="Eslint" alt="Eslint" width="40" height="40"/>&nbsp;
+  <img src="https://github.com/devicons/devicon/blob/master/icons/webpack/webpack-original.svg" title="Webpack" alt="Webpack" width="40" height="40"/>&nbsp;
 
 Сначала нужно установить npm пакеты
 
